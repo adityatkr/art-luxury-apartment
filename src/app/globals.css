@@ -1,26 +1,164 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* White light theme */
+  --background: #FFFFFF;
+  --foreground: #1A1A2A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A2A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A2A;
+  --primary: #7357FF;
+  --primary-foreground: #ffffff;
+  --secondary: #F7F8FA;
+  --secondary-foreground: #1A1A2A;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #FF8A45;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #E5E7EB;
+  --input: #F7F8FA;
+  --ring: #7357FF;
+  --radius: 0.75rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A2A;
+  --sidebar-primary: #7357FF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F7F8FA;
+  --sidebar-accent-foreground: #1A1A2A;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #7357FF;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-serif { font-family: var(--font-playfair), ui-serif, Georgia, serif; }
+  .font-sans  { font-family: var(--font-noto-sans-jp), ui-sans-serif, system-ui, sans-serif; }
 }
+
+html { scroll-behavior: smooth; }
+img  { display: block; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F7F8FA; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#7357FF, #FF8A45); border-radius: 3px; }
+
+/* ── Rainbow gradient button — the original signature ────────────────── */
+.btn-rainbow {
+  background: linear-gradient(135deg, #7357FF 0%, #C344D8 50%, #FF8A45 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-rainbow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FF8A45 0%, #C344D8 50%, #7357FF 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.btn-rainbow:hover::before { opacity: 1; }
+.btn-rainbow:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(115,87,255,0.35); }
+.btn-rainbow > * { position: relative; }
+.btn-rainbow > span { position: relative; }
+
+/* ── Section label — gradient text ──────────────────────────────────── */
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7357FF, #FF8A45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* ── Gradient text utility ───────────────────────────────────────────── */
+.grad-text {
+  background: linear-gradient(135deg, #7357FF, #FF8A45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glass / surface card (now just white shadow card) ───────────────── */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+/* ── Gradient border on hover ────────────────────────────────────────── */
+.grad-border-hover {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+.grad-border-hover:hover {
+  box-shadow: 0 0 0 1.5px #7357FF, 0 8px 32px rgba(115,87,255,0.12);
+}
+
+/* ── Serif heading utility ───────────────────────────────────────────── */
+.heading-serif {
+  font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+}
+
+/* ── Soft surface section background ────────────────────────────────── */
+.surface { background-color: #F7F8FA; }

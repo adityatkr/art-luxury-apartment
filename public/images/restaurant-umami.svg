@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#0E0B06"/>
+      <stop offset="50%" stop-color="#1C140A"/>
+      <stop offset="100%" stop-color="#28200E"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="50%" cy="55%" r="45%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B88040" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#B88040" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="candle" cx="50%" cy="60%" r="12%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F4C060" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F4C060" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#bg)"/>
+  <rect width="800" height="560" fill="url(#warm)"/>
+  <rect width="800" height="560" fill="url(#candle)"/>
+  <!-- Table silhouette -->
+  <ellipse cx="400" cy="380" rx="160" ry="40" fill="#9C7030" fill-opacity="0.2"/>
+  <!-- Candle suggestion -->
+  <rect x="392" y="310" width="16" height="50" fill="#D4A040" fill-opacity="0.15" rx="2"/>
+  <ellipse cx="400" cy="308" rx="10" ry="14" fill="#F4C060" fill-opacity="0.25"/>
+  <!-- Chopstick lines -->
+  <line x1="340" y1="340" x2="380" y2="380" stroke="#C49840" stroke-opacity="0.15" stroke-width="2"/>
+  <line x1="335" y1="338" x2="375" y2="378" stroke="#C49840" stroke-opacity="0.1" stroke-width="2"/>
+  <text x="400" y="175" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#D4A850" fill-opacity="0.3" letter-spacing="8">UMAMI</text>
+  <text x="400" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#C49840" fill-opacity="0.2" letter-spacing="4">JAPANESE FUSION DINING</text>
+  <text x="400" y="218" text-anchor="middle" font-family="monospace" font-size="9" fill="white" fill-opacity="0.1" letter-spacing="2">Replace with: /images/restaurant-umami.jpg</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0%" stop-color="#120D08"/><stop offset="100%" stop-color="#241808"/></linearGradient>
+    <radialGradient id="w" cx="50%" cy="60%" r="40%" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C49040" stop-opacity="0.25"/><stop offset="100%" stop-color="#C49040" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="700" height="500" fill="url(#bg)"/>
+  <rect width="700" height="500" fill="url(#w)"/>
+  <ellipse cx="350" cy="340" rx="130" ry="35" fill="#9C7030" fill-opacity="0.18"/>
+  <ellipse cx="350" cy="325" rx="100" ry="20" fill="#E0C080" fill-opacity="0.1"/>
+  <rect x="343" y="270" width="14" height="45" fill="#D4A040" fill-opacity="0.12" rx="2"/>
+  <ellipse cx="350" cy="268" rx="8" ry="11" fill="#F4C060" fill-opacity="0.22"/>
+  <text x="350" y="165" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#D4A850" fill-opacity="0.28" letter-spacing="5">UMAMI DINING</text>
+  <text x="350" y="182" text-anchor="middle" font-family="monospace" font-size="9" fill="white" fill-opacity="0.1" letter-spacing="2">gallery-umami.jpg</text>
+</svg>
