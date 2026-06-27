@@ -46,7 +46,7 @@ export default function AdminPage() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <div className="w-8 h-8 rounded-lg" style={{ background: "linear-gradient(135deg, #7357FF, #FF8A45)" }} />
-              <h1 className="text-[22px] font-bold">Art: The Luxury Serviced Apartment — Admin</h1>
+              <h1 className="text-[22px] font-bold">Art: Luxury Serviced Apartment — Admin</h1>
             </div>
             <p className="text-white/40 text-sm">Booking Management Dashboard</p>
           </div>

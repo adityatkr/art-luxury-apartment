@@ -5,18 +5,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
-
-const navLinks = [
-  { label: "Rooms", href: "#rooms" },
-  { label: "Restaurants", href: "#restaurants" },
-  { label: "Offers", href: "#offers" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { lang, toggle } = useLanguage();
+
+  const T = {
+    en: { rooms: "Rooms", restaurants: "Restaurants", offers: "Offers", gallery: "Gallery", contact: "Contact", bookNow: "Book Now" },
+    ja: { rooms: "客室", restaurants: "レストラン", offers: "ご提案", gallery: "ギャラリー", contact: "お問い合わせ", bookNow: "予約する" },
+  }[lang];
+
+  const navLinks = [
+    { label: T.rooms, href: "#rooms" },
+    { label: T.restaurants, href: "#restaurants" },
+    { label: T.offers, href: "#offers" },
+    { label: T.gallery, href: "#gallery" },
+    { label: T.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -50,8 +57,8 @@ export default function Navbar() {
               priority
             />
             <div className={`hidden sm:block border-l pl-3 transition-colors duration-300 ${scrolled ? "border-[#E5E7EB]" : "border-white/15"}`}>
-              <p className={`text-[11px] font-semibold tracking-[0.1em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#374151]" : "text-white"}`}>Art: The Luxury Serviced Apt</p>
-              <p className={`text-[9px] tracking-[0.12em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#9CA3AF]" : "text-white/40"}`}>Golf Course Road, Gurgaon</p>
+              <p className={`text-[11px] font-semibold tracking-[0.1em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#374151]" : "text-white"}`}>Art: Luxury Serviced Apt</p>
+              <p className={`text-[9px] tracking-[0.12em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#9CA3AF]" : "text-white/40"}`}>Golf Course Road, Gurugram</p>
             </div>
           </Link>
 
@@ -69,7 +76,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+917428095672"
               className={`flex items-center gap-2 text-[12px] font-medium transition-colors ${scrolled ? "text-[#6B7280] hover:text-[#374151]" : "text-white/55 hover:text-white"}`}
@@ -77,11 +84,24 @@ export default function Navbar() {
               <Phone size={13} strokeWidth={1.5} />
               +91 74280 95672
             </a>
+
+            {/* Language toggle */}
+            <button
+              onClick={toggle}
+              className={`text-[11px] font-bold tracking-[0.08em] px-3 py-1.5 rounded-full border transition-all duration-200 ${
+                scrolled
+                  ? "border-[#E5E7EB] text-[#374151] hover:border-[#7357FF] hover:text-[#7357FF]"
+                  : "border-white/25 text-white/70 hover:border-white/60 hover:text-white"
+              }`}
+            >
+              {lang === "en" ? "日本語" : "EN"}
+            </button>
+
             <a
               href="#rooms"
               className="btn-rainbow text-[13px] font-semibold tracking-[0.04em] px-5 py-2.5 rounded-full"
             >
-              <span>Book Now</span>
+              <span>{T.bookNow}</span>
             </a>
           </div>
 
@@ -117,15 +137,23 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2 border-t border-[#E5E7EB]">
-                <a href="tel:+917428095672" className="flex items-center gap-2 text-[13px] text-[#6B7280] mb-4">
-                  <Phone size={13} /> +91 74280 95672
-                </a>
+                <div className="flex items-center justify-between mb-4">
+                  <a href="tel:+917428095672" className="flex items-center gap-2 text-[13px] text-[#6B7280]">
+                    <Phone size={13} /> +91 74280 95672
+                  </a>
+                  <button
+                    onClick={toggle}
+                    className="text-[11px] font-bold tracking-[0.08em] px-3 py-1.5 rounded-full border border-[#E5E7EB] text-[#374151] hover:border-[#7357FF] hover:text-[#7357FF] transition-all"
+                  >
+                    {lang === "en" ? "日本語" : "EN"}
+                  </button>
+                </div>
                 <a
                   href="#rooms"
                   onClick={() => setMobileOpen(false)}
                   className="btn-rainbow block text-[14px] font-semibold text-center py-3.5 rounded-xl"
                 >
-                  <span>Book Now</span>
+                  <span>{T.bookNow}</span>
                 </a>
               </div>
             </div>

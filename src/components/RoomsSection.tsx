@@ -7,7 +7,7 @@ import { Check, BedDouble, Ruler, Users, ArrowRight, X, Loader2 } from "lucide-r
 const rooms = [
   {
     id: "sora-1bhk",
-    imageSrc: "/images/bedroom.png",
+    imageSrc: "/images/bedroom.webp",
     imageAlt: "Sora Suites 1 BHK",
     name: "Sora Suites 1 BHK",
     area: "300 sq ft",
@@ -27,7 +27,7 @@ const rooms = [
   },
   {
     id: "sora-bathtub",
-    imageSrc: "/images/bathroom.png",
+    imageSrc: "/images/bathroom.webp",
     imageAlt: "Sora Suites 1 BHK with Bathtub",
     name: "Sora Suites 1 BHK",
     badge: "with Bathtub",

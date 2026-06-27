@@ -1,29 +1,63 @@
 "use client";
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-
-const navLinks = [
-  { label: "Rooms", href: "#rooms" },
-  { label: "Restaurants", href: "#restaurants" },
-  { label: "Offers", href: "#offers" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { lang } = useLanguage();
+
+  const T = {
+    en: {
+      explore: "Explore",
+      dining: "Dining",
+      contact: "Contact",
+      desc: "Premium Japanese-friendly apartment on Golf Course Road, Gurugram. Designed for long stays and corporate comfort.",
+      navLinks: [
+        { label: "Rooms", href: "#rooms" },
+        { label: "Restaurants", href: "#restaurants" },
+        { label: "Offers", href: "#offers" },
+        { label: "Gallery", href: "#gallery" },
+        { label: "About", href: "#about" },
+        { label: "Contact", href: "#contact" },
+      ],
+      restaurants: [
+        { name: "Arata", sub: "Japanese Fusion · Fine Dining", time: "6:00 AM – 10:30 PM" },
+        { name: "Kaffee Stories", sub: "Rooftop Café · Soft Bar", time: "8:00 AM – 10:30 PM" },
+      ],
+      rights: "All rights reserved.",
+      policy: ["Privacy Policy", "Terms & Conditions", "Cancellation Policy"],
+    },
+    ja: {
+      explore: "探索",
+      dining: "お食事",
+      contact: "お問い合わせ",
+      desc: "グルグラムのゴルフコースロードにある日本人フレンドリーなプレミアムアパートメント。長期滞在と法人向けに設計。",
+      navLinks: [
+        { label: "客室", href: "#rooms" },
+        { label: "レストラン", href: "#restaurants" },
+        { label: "特典", href: "#offers" },
+        { label: "ギャラリー", href: "#gallery" },
+        { label: "会社概要", href: "#about" },
+        { label: "お問い合わせ", href: "#contact" },
+      ],
+      restaurants: [
+        { name: "荒田 (Arata)", sub: "日本フュージョン · ファインダイニング", time: "午前6時 – 午後10時30分" },
+        { name: "カフェ・ストーリーズ", sub: "ルーフトップカフェ · ソフトバー", time: "午前8時 – 午後10時30分" },
+      ],
+      rights: "全著作権所有。",
+      policy: ["プライバシーポリシー", "利用規約", "キャンセルポリシー"],
+    },
+  }[lang];
+
   return (
     <footer className="bg-[#0A0A14] text-white">
       <div className="max-w-[1280px] mx-auto px-8 lg:px-12 pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand */}
           <div>
             <div className="mb-5">
-              <p className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>Art: The Luxury Serviced Apartment</p>
+              <p className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>Art: Luxury Serviced Apartment</p>
             </div>
-            <p className="text-[13px] text-white/45 leading-[1.8] mb-6">
-              Premium Japanese-friendly apartment on Golf Course Road, Gurgaon. Designed for long stays and corporate comfort.
-            </p>
+            <p className="text-[13px] text-white/45 leading-[1.8] mb-6">{T.desc}</p>
             <div className="flex gap-2.5">
               {["IG", "FB", "LI"].map((s) => (
                 <a key={s} href="#"
@@ -34,11 +68,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Nav */}
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-5 grad-text">Explore</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-5 grad-text">{T.explore}</p>
             <ul className="flex flex-col gap-3">
-              {navLinks.map((link) => (
+              {T.navLinks.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-[13px] text-white/45 hover:text-white transition-colors">{link.label}</a>
                 </li>
@@ -46,14 +79,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Dining */}
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-5 grad-text">Dining</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-5 grad-text">{T.dining}</p>
             <div className="flex flex-col gap-5">
-              {[
-                { name: "Arata", sub: "Japanese Fusion · Fine Dining", time: "6:00 AM – 10:30 PM" },
-                { name: "Kaffee Stories", sub: "Rooftop Café · Soft Bar", time: "8:00 AM – 10:30 PM" },
-              ].map((r) => (
+              {T.restaurants.map((r) => (
                 <div key={r.name}>
                   <p className="text-[13px] font-semibold text-white mb-1">{r.name}</p>
                   <p className="text-[12px] text-white/35">{r.sub}</p>
@@ -63,13 +92,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact */}
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-5 grad-text">Contact</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-5 grad-text">{T.contact}</p>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-3">
                 <MapPin size={14} className="grad-text mt-0.5 flex-shrink-0" strokeWidth={1.5} />
-                <p className="text-[13px] text-white/45 leading-relaxed">517, Sector 27, Golf Course Road<br />Gurgaon, Haryana 122002</p>
+                <p className="text-[13px] text-white/45 leading-relaxed">517, Sector 27, Golf Course Road<br />Gurugram, Haryana 122002</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={14} className="grad-text flex-shrink-0" strokeWidth={1.5} />
@@ -84,9 +112,9 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/[0.07] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[12px] text-white/25">&copy; {new Date().getFullYear()} Art: The Luxury Serviced Apartment. All rights reserved.</p>
+          <p className="text-[12px] text-white/25">&copy; {new Date().getFullYear()} Art: Luxury Serviced Apartment. {T.rights}</p>
           <div className="flex items-center gap-6">
-            {["Privacy Policy", "Terms & Conditions", "Cancellation Policy"].map((link) => (
+            {T.policy.map((link) => (
               <a key={link} href="#" className="text-[11px] text-white/25 hover:text-white/60 transition-colors">{link}</a>
             ))}
           </div>

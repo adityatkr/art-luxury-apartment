@@ -28,18 +28,18 @@ export async function sendBookingConfirmation(booking: {
   const fmt = (d: Date) => d.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
 
   const hotelEmail = process.env.HOTEL_EMAIL ?? "reservation@limetreehotels.com";
-  const fromEmail = process.env.FROM_EMAIL ?? `"Art: The Luxury Serviced Apartment" <${process.env.SMTP_USER}>`;
+  const fromEmail = process.env.FROM_EMAIL ?? `"Art: Luxury Serviced Apartment" <${process.env.SMTP_USER}>`;
 
   // Email to guest
   await transporter.sendMail({
     from: fromEmail,
     to: booking.email,
-    subject: `Booking Confirmed – Art: The Luxury Serviced Apartment [#${booking.id.slice(-6).toUpperCase()}]`,
+    subject: `Booking Confirmed – Art: Luxury Serviced Apartment [#${booking.id.slice(-6).toUpperCase()}]`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0A0A14; color: #fff; border-radius: 12px; overflow: hidden;">
         <div style="background: linear-gradient(135deg, #7357FF, #FF8A45); padding: 32px 40px;">
-          <h1 style="margin: 0; font-size: 28px; font-weight: 700;">Art: The Luxury Serviced Apartment</h1>
-          <p style="margin: 4px 0 0; opacity: 0.85; font-size: 13px;">Golf Course Road, Gurgaon</p>
+          <h1 style="margin: 0; font-size: 28px; font-weight: 700;">Art: Luxury Serviced Apartment</h1>
+          <p style="margin: 4px 0 0; opacity: 0.85; font-size: 13px;">Golf Course Road, Gurugram</p>
         </div>
         <div style="padding: 40px;">
           <h2 style="color: #C4A87A; font-size: 18px; margin-top: 0;">Booking Enquiry Received</h2>
@@ -96,16 +96,16 @@ export async function sendContactConfirmation(enquiry: {
   message: string;
 }) {
   const hotelEmail = process.env.HOTEL_EMAIL ?? "reservation@limetreehotels.com";
-  const fromEmail = process.env.FROM_EMAIL ?? `"Art: The Luxury Serviced Apartment" <${process.env.SMTP_USER}>`;
+  const fromEmail = process.env.FROM_EMAIL ?? `"Art: Luxury Serviced Apartment" <${process.env.SMTP_USER}>`;
 
   await transporter.sendMail({
     from: fromEmail,
     to: enquiry.email,
-    subject: `We received your enquiry – Art: The Luxury Serviced Apartment`,
+    subject: `We received your enquiry – Art: Luxury Serviced Apartment`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: linear-gradient(135deg, #7357FF, #FF8A45); padding: 28px 36px; border-radius: 12px 12px 0 0;">
-          <h1 style="margin: 0; color: #fff; font-size: 24px;">Art: The Luxury Serviced Apartment</h1>
+          <h1 style="margin: 0; color: #fff; font-size: 24px;">Art: Luxury Serviced Apartment</h1>
         </div>
         <div style="background: #0A0A14; padding: 36px; border-radius: 0 0 12px 12px; color: #fff;">
           <p style="color: rgba(255,255,255,0.75);">Dear ${enquiry.name}, thank you for contacting us. We've received your message and will get back to you within 24 hours.</p>

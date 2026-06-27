@@ -3,32 +3,39 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { X, ZoomIn } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const images = [
-  { src: "/images/bedroom.png",        alt: "Sora Suite Bedroom",      label: "Bedroom",          span: "col-span-2 row-span-2", pos: "object-center" },
-  { src: "/images/living-room.png",    alt: "Suite Living Room",       label: "Living Room",      span: "",                      pos: "object-center" },
-  { src: "/images/kitchen.png",        alt: "Fully Equipped Kitchen",  label: "Kitchen",          span: "",                      pos: "object-center" },
-  { src: "/images/bathroom.png",       alt: "Luxury Bathroom",         label: "Bathroom",         span: "",                      pos: "object-top" },
-  { src: "/images/art-wall.png",       alt: "Suite Art Wall",          label: "Suite Interior",   span: "",                      pos: "object-top" },
-  { src: "/images/hotel-render.png",   alt: "Art Apartment at Sunset", label: "The Building",     span: "",                      pos: "object-center" },
-  { src: "/images/corridor.png",       alt: "Apartment Corridor",      label: "Corridors",        span: "",                      pos: "object-center" },
-  { src: "/images/room-interior.png",  alt: "Room with Smart TV",      label: "Smart Room",       span: "",                      pos: "object-center" },
+  { src: "/images/bedroom.webp",        alt: "Sora Suite Bedroom",      label: "Bedroom",          span: "col-span-2 row-span-2", pos: "object-center" },
+  { src: "/images/living-room.webp",    alt: "Suite Living Room",       label: "Living Room",      span: "",                      pos: "object-center" },
+  { src: "/images/kitchen.webp",        alt: "Fully Equipped Kitchen",  label: "Kitchen",          span: "",                      pos: "object-center" },
+  { src: "/images/bathroom.webp",       alt: "Luxury Bathroom",         label: "Bathroom",         span: "",                      pos: "object-top" },
+  { src: "/images/art-wall.webp",       alt: "Suite Art Wall",          label: "Suite Interior",   span: "",                      pos: "object-top" },
+  { src: "/images/hotel-render.webp",   alt: "Art Apartment at Sunset", label: "The Building",     span: "",                      pos: "object-center" },
+  { src: "/images/corridor.webp",       alt: "Apartment Corridor",      label: "Corridors",        span: "",                      pos: "object-center" },
+  { src: "/images/room-interior.webp",  alt: "Room with Smart TV",      label: "Smart Room",       span: "",                      pos: "object-center" },
 ];
 
 export default function GallerySection() {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const { lang } = useLanguage();
+
+  const T = {
+    en: { label: "Gallery", h2: "Photo Gallery", subtitle: "A Glimpse Inside Art" },
+    ja: { label: "ギャラリー", h2: "フォトギャラリー", subtitle: "アートの内側を覗く" },
+  }[lang];
 
   return (
     <section className="bg-[#F7F8FA] py-28" id="gallery">
       <div className="max-w-[1280px] mx-auto px-8 lg:px-12">
         <div className="text-center mb-16">
-          <motion.p initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="section-label mb-4">Gallery</motion.p>
+          <motion.p initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="section-label mb-4">{T.label}</motion.p>
           <motion.h2 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
             className="font-light text-[#1A1A2A] leading-[1.2] mb-2"
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
-            フォトギャラリー
+            {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">A Glimpse Inside Art</p>
+          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 auto-rows-[220px]">

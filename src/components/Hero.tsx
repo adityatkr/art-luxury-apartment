@@ -3,28 +3,40 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SLIDES = [
-  { src: "/images/hotel-render.png",   alt: "Art Apartment at Sunset" },
-  { src: "/images/bedroom.png",        alt: "Sora Suite Bedroom" },
-  { src: "/images/living-room.png",    alt: "Suite Living Room" },
-  { src: "/images/bathroom.png",       alt: "Luxury Bathroom" },
-  { src: "/images/kitchen.png",        alt: "Equipped Kitchen" },
-  { src: "/images/art-wall.png",       alt: "Suite Art Wall" },
-  { src: "/images/corridor.png",       alt: "Apartment Corridor" },
-  { src: "/images/room-interior.png",  alt: "Smart Room" },
-];
-
-const USP_CHIPS = [
-  "Japanese Friendly",
-  "1 BHK Suites",
-  "In-house Restaurant",
-  "Golf Course Road",
-  "Long Stay Specialists",
-  "Corporate Ready",
+  { src: "/images/hotel-render.webp",   alt: "Art Apartment at Sunset" },
+  { src: "/images/bedroom.webp",        alt: "Sora Suite Bedroom" },
+  { src: "/images/living-room.webp",    alt: "Suite Living Room" },
+  { src: "/images/bathroom.webp",       alt: "Luxury Bathroom" },
+  { src: "/images/kitchen.webp",        alt: "Equipped Kitchen" },
+  { src: "/images/art-wall.webp",       alt: "Suite Art Wall" },
+  { src: "/images/corridor.webp",       alt: "Apartment Corridor" },
+  { src: "/images/room-interior.webp",  alt: "Smart Room" },
 ];
 
 export default function Hero() {
+  const { lang } = useLanguage();
+
+  const T = {
+    en: {
+      h1: "The Pinnacle of Luxury Living",
+      subtitle: "Premium Japanese-Friendly Apartment in Gurugram",
+      desc: "Spacious 1 BHK suites, two restaurants, and dedicated Japanese hospitality — built for extended corporate stays.",
+      chips: ["Japanese Friendly", "1 BHK Suites", "In-house Restaurant", "Golf Course Road", "Long Stay Specialists", "Corporate Ready"],
+      roomType: "Room Type", checkIn: "Check-in", checkOut: "Check-out",
+      explore: "Explore Rooms", contactUs: "Contact Us", checkAvail: "Check Availability",
+    },
+    ja: {
+      h1: "至高のラグジュアリー滞在",
+      subtitle: "グルグラムのプレミアム日本人フレンドリーアパートメント",
+      desc: "広々とした1BHKスイート、2つのレストラン、そして専任の日本のおもてなし — 長期法人滞在のために設計。",
+      chips: ["日本人フレンドリー", "1BHKスイート", "館内レストラン", "ゴルフコースロード", "長期滞在専門", "法人対応"],
+      roomType: "客室タイプ", checkIn: "チェックイン", checkOut: "チェックアウト",
+      explore: "客室を見る", contactUs: "お問い合わせ", checkAvail: "空室確認",
+    },
+  }[lang];
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -85,7 +97,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="section-label mb-5"
         >
-          517, Sector 27 · Golf Course Road, Gurgaon
+          517, Sector 27 · Golf Course Road, Gurugram
         </motion.p>
 
         <motion.h1
@@ -99,7 +111,7 @@ export default function Hero() {
             letterSpacing: "0.04em",
           }}
         >
-          至高のラグジュアリー滞在
+          {T.h1}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 12 }}
@@ -108,7 +120,7 @@ export default function Hero() {
           className="text-white/60 mb-6 tracking-[0.08em]"
           style={{ fontSize: "clamp(13px, 1.4vw, 16px)" }}
         >
-          Premium Japanese‑Friendly Apartment in Gurgaon
+          {T.subtitle}
         </motion.p>
 
         <motion.p
@@ -117,7 +129,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.55 }}
           className="text-white/50 text-[14px] leading-[1.8] mb-8 max-w-[460px] tracking-[0.03em]"
         >
-          Spacious 1 BHK suites, two restaurants, and dedicated Japanese hospitality — built for extended corporate stays.
+          {T.desc}
         </motion.p>
 
         <motion.div
@@ -126,7 +138,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.65 }}
           className="flex flex-wrap justify-center gap-2 mb-10"
         >
-          {USP_CHIPS.map((chip) => (
+          {T.chips.map((chip) => (
             <span
               key={chip}
               className="text-[11px] font-medium text-white/70 border border-white/15 px-3 py-1.5 rounded-full backdrop-blur-sm bg-white/[0.04]"
@@ -143,13 +155,13 @@ export default function Hero() {
           className="flex gap-3"
         >
           <a href="#rooms" className="btn-rainbow text-[14px] font-semibold px-8 py-3.5 rounded-full">
-            <span>Explore Rooms</span>
+            <span>{T.explore}</span>
           </a>
           <a
             href="#contact"
             className="text-[14px] font-semibold px-8 py-3.5 rounded-full border border-white/20 text-white/80 hover:border-white/40 hover:text-white transition-all"
           >
-            Contact Us
+            {T.contactUs}
           </a>
         </motion.div>
       </motion.div>
@@ -164,7 +176,7 @@ export default function Hero() {
       >
         <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row gap-3 items-end">
           <div className="flex-1 min-w-0">
-            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">Room Type</label>
+            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">{T.roomType}</label>
             <select
               value={room}
               onChange={(e) => setRoom(e.target.value)}
@@ -175,7 +187,7 @@ export default function Hero() {
             </select>
           </div>
           <div className="flex-1 min-w-0">
-            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">Check-in</label>
+            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">{T.checkIn}</label>
             <input
               type="date"
               value={checkIn}
@@ -185,7 +197,7 @@ export default function Hero() {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">Check-out</label>
+            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">{T.checkOut}</label>
             <input
               type="date"
               value={checkOut}
@@ -198,7 +210,7 @@ export default function Hero() {
             href="#rooms"
             className="btn-rainbow text-[13px] font-semibold px-6 py-3 rounded-xl whitespace-nowrap flex-shrink-0"
           >
-            <span>Check Availability</span>
+            <span>{T.checkAvail}</span>
           </a>
         </div>
       </motion.div>
