@@ -10,8 +10,8 @@ const images = [
   { src: "/images/kitchen.png",        alt: "Fully Equipped Kitchen",  label: "Kitchen",          span: "",                      pos: "object-center" },
   { src: "/images/bathroom.png",       alt: "Luxury Bathroom",         label: "Bathroom",         span: "",                      pos: "object-top" },
   { src: "/images/art-wall.png",       alt: "Suite Art Wall",          label: "Suite Interior",   span: "",                      pos: "object-top" },
-  { src: "/images/hotel-exterior.png", alt: "Art Hotel Exterior",      label: "The Building",     span: "",                      pos: "object-center" },
-  { src: "/images/corridor.png",       alt: "Hotel Corridor",          label: "Corridors",        span: "",                      pos: "object-center" },
+  { src: "/images/hotel-render.png",   alt: "Art Apartment at Sunset", label: "The Building",     span: "",                      pos: "object-center" },
+  { src: "/images/corridor.png",       alt: "Apartment Corridor",      label: "Corridors",        span: "",                      pos: "object-center" },
   { src: "/images/room-interior.png",  alt: "Room with Smart TV",      label: "Smart Room",       span: "",                      pos: "object-center" },
 ];
 

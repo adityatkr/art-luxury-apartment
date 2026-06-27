@@ -22,7 +22,7 @@ export default function Footer() {
               <p className="text-[18px] font-bold text-white" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>Art: The Luxury Serviced Apartment</p>
             </div>
             <p className="text-[13px] text-white/45 leading-[1.8] mb-6">
-              Premium Japanese-friendly hotel on Golf Course Road, Gurgaon. Designed for long stays and corporate comfort.
+              Premium Japanese-friendly apartment on Golf Course Road, Gurgaon. Designed for long stays and corporate comfort.
             </p>
             <div className="flex gap-2.5">
               {["IG", "FB", "LI"].map((s) => (

@@ -42,7 +42,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image
               src="/logo.png"
-              alt="Art Hotel"
+              alt="Art Apartment"
               height={44}
               width={100}
               style={{ height: "44px", width: "auto" }}

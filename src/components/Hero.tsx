@@ -5,13 +5,13 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { ChevronDown } from "lucide-react";
 
 const SLIDES = [
-  { src: "/images/hotel-exterior.png", alt: "Art Hotel Exterior" },
+  { src: "/images/hotel-render.png",   alt: "Art Apartment at Sunset" },
   { src: "/images/bedroom.png",        alt: "Sora Suite Bedroom" },
   { src: "/images/living-room.png",    alt: "Suite Living Room" },
   { src: "/images/bathroom.png",       alt: "Luxury Bathroom" },
   { src: "/images/kitchen.png",        alt: "Equipped Kitchen" },
   { src: "/images/art-wall.png",       alt: "Suite Art Wall" },
-  { src: "/images/corridor.png",       alt: "Hotel Corridor" },
+  { src: "/images/corridor.png",       alt: "Apartment Corridor" },
   { src: "/images/room-interior.png",  alt: "Smart Room" },
 ];
 
@@ -108,7 +108,7 @@ export default function Hero() {
           className="text-white/60 mb-6 tracking-[0.08em]"
           style={{ fontSize: "clamp(13px, 1.4vw, 16px)" }}
         >
-          Premium Japanese‑Friendly Hotel in Gurgaon
+          Premium Japanese‑Friendly Apartment in Gurgaon
         </motion.p>
 
         <motion.p

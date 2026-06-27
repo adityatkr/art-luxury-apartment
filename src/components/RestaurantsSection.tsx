@@ -6,7 +6,7 @@ import { Clock } from "lucide-react";
 const restaurants = [
   {
     id: "arata",
-    imageSrc: "/images/restaurant-arata.svg",
+    imageSrc: "/images/arata-logo.png",
     name: "Arata",
     tagline: "Fine Japanese Fusion Dining",
     cuisine: ["Indian", "Japanese Fusion"],
@@ -16,7 +16,7 @@ const restaurants = [
   },
   {
     id: "kaffee",
-    imageSrc: "/images/restaurant-kaffee.svg",
+    imageSrc: "/images/kaffee-stories.png",
     name: "Kaffee Stories",
     tagline: "Rooftop Café & Soft Bar",
     cuisine: ["Indian", "Chinese Fusion"],
@@ -37,7 +37,7 @@ export default function RestaurantsSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             お食事のご案内
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">Two Exceptional Restaurants, One Hotel</p>
+          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">Two Exceptional Restaurants, One Apartment</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -50,8 +50,8 @@ export default function RestaurantsSection() {
               transition={{ duration: 0.7, delay: i * 0.15 }}
               className="group glass-card grad-border-hover rounded-3xl overflow-hidden flex flex-col"
             >
-              <div className="relative h-[220px] overflow-hidden">
-                <img src={r.imageSrc} alt={r.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="relative overflow-hidden" style={{ height: r.id === "kaffee" ? "340px" : "260px", background: r.id === "arata" ? "#0A0A0A" : r.id === "kaffee" ? "#0A0A14" : undefined }}>
+                <img src={r.imageSrc} alt={r.name} className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${r.id === "kaffee" || r.id === "arata" ? "object-contain" : "object-cover"}`} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                   <div>
