@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Check, BedDouble, Ruler, Users, ArrowRight, X, Loader2 } from "lucide-react";
+import { Check, BedDouble, Users, ArrowRight, X, Loader2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const rooms = [
@@ -11,7 +11,6 @@ const rooms = [
     imageSrc: "/images/bedroom.webp",
     imageAlt: "Sora Suites 1 BHK",
     name: "Sora Suites 1 BHK",
-    area: "300 sq ft",
     occupancy: "2 Adults",
     beds: "King Size Bed",
     count: 16,
@@ -40,7 +39,6 @@ const rooms = [
     imageAlt: "Sora Suites 1 BHK with Bathtub",
     name: "Sora Suites 1 BHK",
     badge: { en: "with Bathtub", ja: "バスタブ付き" },
-    area: "300 sq ft",
     occupancy: "2 Adults",
     beds: "King Size Bed",
     count: 16,
@@ -357,7 +355,7 @@ export default function RoomsSection() {
                       style={{ background: "linear-gradient(135deg, #7357FF, #FF8A45)" }}>{badgeLabel}</span>
                   )}
                   <div className="absolute bottom-4 left-4 flex gap-2">
-                    {[{ icon: <Ruler size={10} />, label: room.area }, { icon: <BedDouble size={10} />, label: room.beds }, { icon: <Users size={10} />, label: room.occupancy }].map((tag) => (
+                    {[{ icon: <BedDouble size={10} />, label: room.beds }, { icon: <Users size={10} />, label: room.occupancy }].map((tag) => (
                       <span key={tag.label} className="bg-white/10 backdrop-blur-sm text-white text-[10px] font-medium px-2.5 py-1 rounded-full flex items-center gap-1.5">{tag.icon} {tag.label}</span>
                     ))}
                   </div>
