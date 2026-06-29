@@ -14,6 +14,7 @@ const images = [
   { src: "/images/hotel-render.webp",   alt: "Art Apartment at Sunset", label: "The Building",     span: "",                      pos: "object-center" },
   { src: "/images/corridor.webp",       alt: "Apartment Corridor",      label: "Corridors",        span: "",                      pos: "object-center" },
   { src: "/images/room-interior.webp",  alt: "Room with Smart TV",      label: "Smart Room",       span: "",                      pos: "object-center" },
+  { src: "/images/reception.webp",      alt: "Art Apartment Reception",  label: "Reception",        span: "",                      pos: "object-center" },
 ];
 
 export default function GallerySection() {
