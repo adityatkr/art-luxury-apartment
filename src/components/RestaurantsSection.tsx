@@ -86,7 +86,7 @@ export default function RestaurantsSection() {
                 className="group glass-card grad-border-hover rounded-3xl overflow-hidden flex flex-col"
               >
                 <div className="relative overflow-hidden" style={{ height: r.id === "kaffee" ? "340px" : "260px", background: r.id === "arata" ? "#0A0A0A" : "#0A0A14" }}>
-                  <img src={imgData.src} alt={r.name} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" />
+                  <img src={imgData.src} alt={r.name} loading="lazy" className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <div>

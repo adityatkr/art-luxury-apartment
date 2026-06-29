@@ -66,6 +66,7 @@ export default function Hero() {
             key={current}
             src={SLIDES[current].src}
             alt={SLIDES[current].alt}
+            fetchPriority={current === 0 ? "high" : "auto"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

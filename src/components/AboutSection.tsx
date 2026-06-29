@@ -64,7 +64,7 @@ export default function AboutSection() {
             className="relative"
           >
             <div className="rounded-3xl overflow-hidden relative">
-              <img src="/images/hotel-render.webp" alt="Art: Luxury Serviced Apartment" className="w-full h-auto" />
+              <img src="/images/hotel-render.webp" alt="Art: Luxury Serviced Apartment" loading="lazy" className="w-full h-auto" />
               <div className="absolute inset-0 bg-gradient-to-br from-[#7357FF]/20 via-transparent to-[#FF8A45]/15" />
             </div>
             <div className="absolute top-4 left-4 flex flex-wrap gap-2 max-w-[60%]">

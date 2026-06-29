@@ -86,13 +86,13 @@ export default function OffersSection() {
           >
             <div className="grid grid-cols-2 grid-rows-2 gap-[2px] h-[200px] flex-shrink-0">
               <div className="row-span-2 overflow-hidden">
-                <img src={BOOK_TODAY_IMAGES[0].src} alt="Suite bedroom" className={`w-full h-full object-cover ${BOOK_TODAY_IMAGES[0].pos} transition-transform duration-700 hover:scale-105`} />
+                <img loading="lazy" src={BOOK_TODAY_IMAGES[0].src} alt="Suite bedroom" className={`w-full h-full object-cover ${BOOK_TODAY_IMAGES[0].pos} transition-transform duration-700 hover:scale-105`} />
               </div>
               <div className="overflow-hidden">
-                <img src={BOOK_TODAY_IMAGES[1].src} alt="Living room" className={`w-full h-full object-cover ${BOOK_TODAY_IMAGES[1].pos} transition-transform duration-700 hover:scale-105`} />
+                <img loading="lazy" src={BOOK_TODAY_IMAGES[1].src} alt="Living room" className={`w-full h-full object-cover ${BOOK_TODAY_IMAGES[1].pos} transition-transform duration-700 hover:scale-105`} />
               </div>
               <div className="overflow-hidden">
-                <img src={BOOK_TODAY_IMAGES[2].src} alt="Bathroom" className={`w-full h-full object-cover ${BOOK_TODAY_IMAGES[2].pos} transition-transform duration-700 hover:scale-105`} />
+                <img loading="lazy" src={BOOK_TODAY_IMAGES[2].src} alt="Bathroom" className={`w-full h-full object-cover ${BOOK_TODAY_IMAGES[2].pos} transition-transform duration-700 hover:scale-105`} />
               </div>
             </div>
             <div className="p-7 flex flex-col flex-1">
@@ -119,7 +119,7 @@ export default function OffersSection() {
             <div className="grid grid-cols-3 gap-[2px] h-[200px] flex-shrink-0">
               {VIEW_RATES_IMAGES.map((img, i) => (
                 <div key={i} className="overflow-hidden">
-                  <img src={img.src} alt="" className={`w-full h-full object-cover ${img.pos} transition-transform duration-700 hover:scale-105`} />
+                  <img loading="lazy" src={img.src} alt="" className={`w-full h-full object-cover ${img.pos} transition-transform duration-700 hover:scale-105`} />
                 </div>
               ))}
             </div>

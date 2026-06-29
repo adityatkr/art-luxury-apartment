@@ -98,12 +98,10 @@ export default function WhyChooseUs() {
               className="group glass-card grad-border-hover rounded-2xl p-5 transition-all duration-300"
             >
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 text-white/60 group-hover:text-white"
+                className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 text-[#7357FF] group-hover:text-white group-hover:scale-110"
                 style={{ background: "rgba(115, 87, 255, 0.1)" }}
               >
-                <div className="group-hover:grad-text transition-all" style={{ color: "inherit" }}>
-                  {icons[i]}
-                </div>
+                {icons[i]}
               </div>
               <h3 className="text-[14px] font-semibold text-[#1A1A2A] mb-2 leading-tight">{f.title}</h3>
               <p className="text-[12px] text-[#6B7280] leading-[1.75]">{f.desc}</p>

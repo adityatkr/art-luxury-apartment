@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, Loader2 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
@@ -43,6 +43,10 @@ export default function ContactSection() {
 
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: T.subjects[0], message: "" });
   const [step, setStep] = useState<"form" | "success">("form");
+
+  useEffect(() => {
+    setForm((prev) => ({ ...prev, subject: T.subjects[0] }));
+  }, [lang]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 

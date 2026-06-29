@@ -49,7 +49,7 @@ export default function GallerySection() {
               className={`relative group overflow-hidden rounded-2xl cursor-pointer ${img.span}`}
               onClick={() => setLightbox(i)}
             >
-              <img src={img.src} alt={img.alt} className={`w-full h-full object-cover ${img.pos} transition-transform duration-700 group-hover:scale-[1.06]`} />
+              <img src={img.src} alt={img.alt} loading="lazy" className={`w-full h-full object-cover ${img.pos} transition-transform duration-700 group-hover:scale-[1.06]`} />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center gap-2">
                   <ZoomIn size={20} className="text-white" strokeWidth={1.5} />
