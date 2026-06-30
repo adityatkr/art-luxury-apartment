@@ -83,21 +83,16 @@ export default function NearbySection() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.7, delay: 0.15 }} className="sticky top-24">
-            {/* ── MAP EMBED ────────────────────────────────────────────────────
-                Replace with: <iframe src="https://www.google.com/maps/embed?pb=..." className="w-full h-full rounded-2xl" allowFullScreen loading="lazy" />
-            ────────────────────────────────────────────────────────────── */}
-            <div className="aspect-square max-h-[520px] rounded-2xl overflow-hidden bg-[#F7F8FA] border border-[#E5E7EB] rounded-2xl flex flex-col items-center justify-center gap-4 shadow-sm">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center"
-                style={{ background: "linear-gradient(135deg, #7357FF, #FF8A45)" }}>
-                <MapPin size={24} className="text-white" strokeWidth={1.5} />
-              </div>
-              <div className="text-center">
-                <p className="text-[14px] font-semibold text-[#1A1A2A]">Art: Luxury Serviced Apartment</p>
-                <p className="text-[12px] text-[#9CA3AF] mt-1">517, Sector 27, Golf Course Road</p>
-                <p className="text-[12px] text-[#9CA3AF]">Gurugram, Haryana</p>
-              </div>
-              <a href="https://maps.google.com/?q=517+Sector+27+Golf+Course+Road+Gurugram" target="_blank" rel="noopener noreferrer"
-                className="btn-rainbow text-[12px] font-semibold px-5 py-2.5 rounded-full">
+            <div className="aspect-square max-h-[520px] rounded-2xl overflow-hidden shadow-sm relative">
+              <iframe
+                src="https://maps.google.com/maps?q=28.463133,77.090741&z=16&output=embed"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <a href="https://maps.app.goo.gl/C7axyqx7aq4ksAux5" target="_blank" rel="noopener noreferrer"
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 btn-rainbow text-[12px] font-semibold px-5 py-2.5 rounded-full whitespace-nowrap">
                 <span>Open in Google Maps</span>
               </a>
             </div>
