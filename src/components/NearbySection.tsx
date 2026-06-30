@@ -83,7 +83,7 @@ export default function NearbySection() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.7, delay: 0.15 }} className="sticky top-24">
-            <div className="aspect-square max-h-[520px] rounded-2xl overflow-hidden shadow-sm relative">
+            <div className="rounded-2xl overflow-hidden shadow-sm" style={{ height: "460px" }}>
               <iframe
                 src="https://maps.google.com/maps?q=28.463133,77.090741&z=16&output=embed"
                 className="w-full h-full border-0"
@@ -91,8 +91,10 @@ export default function NearbySection() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
+            </div>
+            <div className="mt-4 flex justify-center">
               <a href="https://maps.app.goo.gl/C7axyqx7aq4ksAux5" target="_blank" rel="noopener noreferrer"
-                className="absolute bottom-4 left-1/2 -translate-x-1/2 btn-rainbow text-[12px] font-semibold px-5 py-2.5 rounded-full whitespace-nowrap">
+                className="btn-rainbow text-[12px] font-semibold px-5 py-2.5 rounded-full whitespace-nowrap">
                 <span>Open in Google Maps</span>
               </a>
             </div>
