@@ -43,22 +43,24 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-8 lg:px-12">
-        <div className="flex items-center justify-between h-[76px]">
+        <div className="flex items-center justify-between h-[84px]">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <Image
-              src="/logo.png"
-              alt="Art Apartment"
-              height={44}
-              width={100}
-              style={{ height: "44px", width: "auto" }}
-              className="object-contain"
-              priority
-            />
-            <div className={`hidden sm:block border-l pl-3 transition-colors duration-300 ${scrolled ? "border-[#E5E7EB]" : "border-white/15"}`}>
-              <p className={`text-[11px] font-semibold tracking-[0.1em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#374151]" : "text-white"}`}>Art: Luxury Serviced Apt</p>
-              <p className={`text-[9px] tracking-[0.12em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#6B7280]" : "text-white/70"}`}>Golf Course Road, Gurugram</p>
+          <Link href="/" className="flex items-center gap-4 flex-shrink-0 group">
+            <div className={`relative rounded-2xl p-1.5 transition-all duration-300 ${scrolled ? "bg-white shadow-sm border border-[#F3F4F6]" : "bg-white/10 backdrop-blur-sm"}`}>
+              <Image
+                src="/logo.png"
+                alt="Art Apartment"
+                height={54}
+                width={130}
+                style={{ height: "54px", width: "auto" }}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <div className={`hidden sm:block border-l pl-4 transition-colors duration-300 ${scrolled ? "border-[#E5E7EB]" : "border-white/20"}`}>
+              <p className={`text-[12px] font-bold tracking-[0.08em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#1A1A2A]" : "text-white"}`}>Art: Luxury Serviced Apartment</p>
+              <p className={`text-[10px] tracking-[0.12em] uppercase leading-tight mt-0.5 transition-colors duration-300 ${scrolled ? "text-[#6B7280]" : "text-white/70"}`}>Golf Course Road, Gurugram</p>
             </div>
           </Link>
 
