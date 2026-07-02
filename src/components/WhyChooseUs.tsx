@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
           >
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -104,7 +104,7 @@ export default function WhyChooseUs() {
                 {icons[i]}
               </div>
               <h3 className="text-[14px] font-semibold text-[#1A1A2A] mb-2 leading-tight">{f.title}</h3>
-              <p className="text-[12px] text-[#6B7280] leading-[1.75]">{f.desc}</p>
+              <p className="text-[12px] text-[#374151] leading-[1.75]">{f.desc}</p>
             </motion.div>
           ))}
         </div>

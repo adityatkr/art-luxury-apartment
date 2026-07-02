@@ -61,7 +61,7 @@ export default function Footer() {
             <div className="flex gap-2.5">
               {["IG", "FB", "LI"].map((s) => (
                 <a key={s} href="#"
-                  className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[11px] font-semibold text-white/40 hover:text-white hover:border-white/40 transition-all duration-200">
+                  className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[11px] font-semibold text-white/70 hover:text-white hover:border-white/40 transition-all duration-200">
                   {s}
                 </a>
               ))}

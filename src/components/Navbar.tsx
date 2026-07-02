@@ -58,7 +58,7 @@ export default function Navbar() {
             />
             <div className={`hidden sm:block border-l pl-3 transition-colors duration-300 ${scrolled ? "border-[#E5E7EB]" : "border-white/15"}`}>
               <p className={`text-[11px] font-semibold tracking-[0.1em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#374151]" : "text-white"}`}>Art: Luxury Serviced Apt</p>
-              <p className={`text-[9px] tracking-[0.12em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#9CA3AF]" : "text-white/40"}`}>Golf Course Road, Gurugram</p>
+              <p className={`text-[9px] tracking-[0.12em] uppercase leading-tight transition-colors duration-300 ${scrolled ? "text-[#6B7280]" : "text-white/70"}`}>Golf Course Road, Gurugram</p>
             </div>
           </Link>
 
@@ -79,7 +79,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+917428095672"
-              className={`flex items-center gap-2 text-[12px] font-medium transition-colors ${scrolled ? "text-[#6B7280] hover:text-[#374151]" : "text-white/55 hover:text-white"}`}
+              className={`flex items-center gap-2 text-[12px] font-medium transition-colors ${scrolled ? "text-[#374151] hover:text-[#374151]" : "text-white/85 hover:text-white"}`}
             >
               <Phone size={13} strokeWidth={1.5} />
               +91 74280 95672
@@ -138,7 +138,7 @@ export default function Navbar() {
               ))}
               <div className="pt-2 border-t border-[#E5E7EB]">
                 <div className="flex items-center justify-between mb-4">
-                  <a href="tel:+917428095672" className="flex items-center gap-2 text-[13px] text-[#6B7280]">
+                  <a href="tel:+917428095672" className="flex items-center gap-2 text-[13px] text-[#374151]">
                     <Phone size={13} /> +91 74280 95672
                   </a>
                   <button

@@ -48,8 +48,8 @@ export default function NearbySection() {
               style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
               {T.h2}
             </h2>
-            <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase mb-6">{T.subtitle}</p>
-            <p className="text-[15px] text-[#6B7280] leading-[1.8] mb-10">{T.body}</p>
+            <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase mb-6">{T.subtitle}</p>
+            <p className="text-[15px] text-[#374151] leading-[1.8] mb-10">{T.body}</p>
 
             <div className="flex flex-col gap-4">
               {attractions[lang].map((a, i) => (
@@ -63,7 +63,7 @@ export default function NearbySection() {
                       <h4 className="text-[14px] font-semibold text-[#1A1A2A]">{a.name}</h4>
                       <span className="text-[11px] font-semibold grad-text glass-card px-2.5 py-1 rounded-full">{a.distance}</span>
                     </div>
-                    <p className="text-[12px] text-[#9CA3AF]">{a.desc}</p>
+                    <p className="text-[12px] text-[#6B7280]">{a.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -74,7 +74,7 @@ export default function NearbySection() {
                 <MapPin size={16} className="grad-text mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-[13px] font-semibold text-white mb-1">Art: Luxury Serviced Apartment</p>
-                  <p className="text-[12px] text-white/50 leading-relaxed">517, Sector 27, Golf Course Road, Gurugram, Haryana</p>
+                  <p className="text-[12px] text-white/80 leading-relaxed">517, Sector 27, Golf Course Road, Gurugram, Haryana</p>
                   <a href="tel:+917428095672" className="text-[12px] grad-text mt-2 block hover:opacity-80">+91 74280 95672</a>
                   <a href="mailto:reservation@limetreehotels.com" className="text-[12px] grad-text block hover:opacity-80">reservation@limetreehotels.com</a>
                 </div>

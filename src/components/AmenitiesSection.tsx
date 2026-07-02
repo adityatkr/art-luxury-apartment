@@ -52,7 +52,7 @@ export default function AmenitiesSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3">
@@ -67,7 +67,7 @@ export default function AmenitiesSection() {
               className="group glass-card grad-border-hover flex flex-col items-center text-center p-4 rounded-2xl cursor-default transition-all duration-300 hover:bg-white/[0.06]"
             >
               <div className="grad-text mb-3 group-hover:scale-110 transition-transform duration-300">{icons[i]}</div>
-              <p className="text-[#6B7280] text-[12px] leading-tight font-medium group-hover:text-[#1A1A2A] transition-colors">{label}</p>
+              <p className="text-[#374151] text-[12px] leading-tight font-medium group-hover:text-[#1A1A2A] transition-colors">{label}</p>
             </motion.div>
           ))}
         </div>

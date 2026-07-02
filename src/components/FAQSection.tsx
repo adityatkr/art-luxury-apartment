@@ -33,14 +33,14 @@ function FAQItem({ faq, isOpen, onToggle }: { faq: { q: string; a: string }; isO
     <div className="border-b border-[#E5E7EB] last:border-none">
       <button className="w-full flex items-center justify-between gap-4 py-5 text-left group" onClick={onToggle}>
         <span className={`text-[15px] font-medium transition-colors ${isOpen ? "text-[#7357FF]" : "text-[#374151] group-hover:text-[#1A1A2A]"}`}>{faq.q}</span>
-        <div className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? "border-[#7357FF] text-[#7357FF]" : "border-[#E5E7EB] text-[#9CA3AF]"}`}>
+        <div className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? "border-[#7357FF] text-[#7357FF]" : "border-[#E5E7EB] text-[#6B7280]"}`}>
           {isOpen ? <Minus size={12} strokeWidth={2} /> : <Plus size={12} strokeWidth={2} />}
         </div>
       </button>
       <AnimatePresence>
         {isOpen && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: "easeInOut" }} className="overflow-hidden">
-            <p className="text-[14px] text-[#6B7280] leading-[1.8] pb-5">{faq.a}</p>
+            <p className="text-[14px] text-[#374151] leading-[1.8] pb-5">{faq.a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -68,8 +68,8 @@ export default function FAQSection() {
               style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
               {T.h2}
             </motion.h2>
-            <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase mb-6">{T.subtitle}</p>
-            <p className="text-[15px] text-[#6B7280] leading-[1.75] mb-8">{T.body}</p>
+            <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase mb-6">{T.subtitle}</p>
+            <p className="text-[15px] text-[#374151] leading-[1.75] mb-8">{T.body}</p>
             <a href="mailto:reservation@limetreehotels.com"
               className="btn-rainbow inline-flex items-center gap-2 text-[13px] font-semibold px-5 py-3 rounded-full">
               <span>{T.cta}</span>

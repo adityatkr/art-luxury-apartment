@@ -36,7 +36,7 @@ export default function GallerySection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 auto-rows-[220px]">
@@ -67,13 +67,13 @@ export default function GallerySection() {
 
       {lightbox !== null && (
         <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4" onClick={() => setLightbox(null)}>
-          <button className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors" onClick={() => setLightbox(null)}>
+          <button className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors" onClick={() => setLightbox(null)}>
             <X size={28} />
           </button>
           <img src={images[lightbox].src} alt={images[lightbox].alt}
             className="max-w-full max-h-[80vh] rounded-xl object-contain"
             onClick={(e) => e.stopPropagation()} />
-          <p className="absolute bottom-8 text-white/50 text-[13px]">{images[lightbox].label}</p>
+          <p className="absolute bottom-8 text-white/80 text-[13px]">{images[lightbox].label}</p>
         </div>
       )}
     </section>

@@ -184,9 +184,9 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
             <h3 className="text-[17px] font-bold text-white" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
               {room.name}{badgeLabel && <> <span className="grad-text">{badgeLabel}</span></>}
             </h3>
-            <p className="text-[12px] text-white/40 mt-0.5">{TM.subtitle}</p>
+            <p className="text-[12px] text-white/70 mt-0.5">{TM.subtitle}</p>
           </div>
-          <button onClick={onClose} className="p-2 text-white/40 hover:text-white transition-colors">
+          <button onClick={onClose} className="p-2 text-white/70 hover:text-white transition-colors">
             <X size={20} />
           </button>
         </div>
@@ -200,13 +200,13 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
             <h4 className="text-[20px] font-bold text-white mb-2" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
               {TM.successTitle}
             </h4>
-            <p className="text-white/50 text-[13px] mb-6">{TM.successBody}</p>
+            <p className="text-white/80 text-[13px] mb-6">{TM.successBody}</p>
             <div className="bg-white/[0.06] border border-white/[0.1] rounded-2xl p-5 text-left mb-6">
               <div className="grid grid-cols-2 gap-3 text-[13px]">
-                <div><p className="text-white/40 text-[10px] uppercase tracking-wider mb-1">{TM.bookingId}</p><p className="text-white font-mono font-bold">#{result.bookingId.slice(-6).toUpperCase()}</p></div>
-                <div><p className="text-white/40 text-[10px] uppercase tracking-wider mb-1">{TM.totalNights}</p><p className="text-white font-bold">{result.totalNights}</p></div>
-                <div><p className="text-white/40 text-[10px] uppercase tracking-wider mb-1">{TM.totalLabel}</p><p className="text-white font-bold">₹{result.totalAmount.toLocaleString("en-IN")}</p></div>
-                <div><p className="text-white/40 text-[10px] uppercase tracking-wider mb-1">{TM.advanceLabel}</p><p className="font-bold grad-text">₹{result.advancePaid.toLocaleString("en-IN")}</p></div>
+                <div><p className="text-white/70 text-[10px] uppercase tracking-wider mb-1">{TM.bookingId}</p><p className="text-white font-mono font-bold">#{result.bookingId.slice(-6).toUpperCase()}</p></div>
+                <div><p className="text-white/70 text-[10px] uppercase tracking-wider mb-1">{TM.totalNights}</p><p className="text-white font-bold">{result.totalNights}</p></div>
+                <div><p className="text-white/70 text-[10px] uppercase tracking-wider mb-1">{TM.totalLabel}</p><p className="text-white font-bold">₹{result.totalAmount.toLocaleString("en-IN")}</p></div>
+                <div><p className="text-white/70 text-[10px] uppercase tracking-wider mb-1">{TM.advanceLabel}</p><p className="font-bold grad-text">₹{result.advancePaid.toLocaleString("en-IN")}</p></div>
               </div>
             </div>
             <button onClick={onClose} className="btn-rainbow text-[14px] font-semibold px-8 py-3 rounded-xl w-full">
@@ -217,17 +217,17 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
           <div className="p-6 flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-3">
               <div className="col-span-2">
-                <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.name}</label>
+                <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.name}</label>
                 <input type="text" required placeholder={TM.namePh} value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputCls} />
               </div>
               <div>
-                <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.email}</label>
+                <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.email}</label>
                 <input type="email" required placeholder={TM.emailPh} value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputCls} />
               </div>
               <div>
-                <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.phone}</label>
+                <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.phone}</label>
                 <input type="tel" required placeholder={TM.phonePh} value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })} className={inputCls} />
               </div>
@@ -235,13 +235,13 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.checkIn}</label>
+                <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.checkIn}</label>
                 <input type="date" min={today} value={form.checkIn}
                   onChange={(e) => setForm({ ...form, checkIn: e.target.value })}
                   className={`${inputCls} [color-scheme:dark]`} />
               </div>
               <div>
-                <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.checkOut}</label>
+                <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.checkOut}</label>
                 <input type="date" min={form.checkIn} value={form.checkOut}
                   onChange={(e) => setForm({ ...form, checkOut: e.target.value })}
                   className={`${inputCls} [color-scheme:dark]`} />
@@ -254,7 +254,7 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
                 { key: "children", label: TM.children, opts: [0, 1, 2] },
               ].map(({ key, label, opts }) => (
                 <div key={key}>
-                  <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{label}</label>
+                  <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{label}</label>
                   <select value={(form as Record<string, string>)[key]}
                     onChange={(e) => setForm({ ...form, [key]: e.target.value })}
                     className={inputCls}>
@@ -263,7 +263,7 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
                 </div>
               ))}
               <div>
-                <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.mealPlan}</label>
+                <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.mealPlan}</label>
                 <select value={form.mealPlan} onChange={(e) => setForm({ ...form, mealPlan: e.target.value })} className={inputCls}>
                   <option value="room-only" className="bg-[#0F0F1A]">{TM.roomOnly}</option>
                   <option value="breakfast" className="bg-[#0F0F1A]">{TM.breakfast}</option>
@@ -272,7 +272,7 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
             </div>
 
             <div>
-              <label className="text-[10px] font-semibold text-white/40 uppercase tracking-widest block mb-1.5">{TM.specialReq}</label>
+              <label className="text-[10px] font-semibold text-white/70 uppercase tracking-widest block mb-1.5">{TM.specialReq}</label>
               <textarea rows={2} placeholder={TM.specialPh} value={form.specialReq}
                 onChange={(e) => setForm({ ...form, specialReq: e.target.value })}
                 className={`${inputCls} resize-none`} />
@@ -281,9 +281,9 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
             {nights > 0 && (
               <div className="bg-white/[0.06] border border-white/[0.1] rounded-xl p-4 flex justify-between items-center">
                 <div>
-                  <p className="text-[11px] text-white/40 uppercase tracking-wider">{TM.estTotal}</p>
+                  <p className="text-[11px] text-white/70 uppercase tracking-wider">{TM.estTotal}</p>
                   <p className="text-[20px] font-bold text-white">₹{estimatedTotal.toLocaleString("en-IN")}</p>
-                  <p className="text-[11px] text-white/40">{nights} {nights > 1 ? TM.nightsP : TM.nights} · {TM.advance}: <span className="grad-text font-semibold">₹{advanceEst.toLocaleString("en-IN")}</span></p>
+                  <p className="text-[11px] text-white/70">{nights} {nights > 1 ? TM.nightsP : TM.nights} · {TM.advance}: <span className="grad-text font-semibold">₹{advanceEst.toLocaleString("en-IN")}</span></p>
                 </div>
               </div>
             )}
@@ -295,7 +295,7 @@ function BookingModal({ room, onClose, lang }: { room: Room; onClose: () => void
               {loading ? <Loader2 size={16} className="animate-spin" /> : <ArrowRight size={16} />}
               <span>{loading ? TM.submitting : TM.submit}</span>
             </button>
-            <p className="text-[11px] text-white/30 text-center">{TM.note}</p>
+            <p className="text-[11px] text-white/60 text-center">{TM.note}</p>
           </div>
         )}
       </motion.div>
@@ -338,7 +338,7 @@ export default function RoomsSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -366,12 +366,12 @@ export default function RoomsSection() {
                     <h3 className="text-[20px] font-bold text-[#1A1A2A] leading-tight" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>
                       {room.name}{badgeLabel && <> <span className="grad-text">{badgeLabel}</span></>}
                     </h3>
-                    <p className="text-[12px] text-[#9CA3AF] mt-1">{room.count} {T.available}</p>
+                    <p className="text-[12px] text-[#6B7280] mt-1">{room.count} {T.available}</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 mb-6">
                     {room.features[lang].map((f) => (
-                      <div key={f} className="flex items-center gap-2 text-[12px] text-[#6B7280]">
+                      <div key={f} className="flex items-center gap-2 text-[12px] text-[#374151]">
                         <Check size={10} strokeWidth={2.5} style={{ color: "#7357FF" }} className="flex-shrink-0" /> {f}
                       </div>
                     ))}
@@ -379,15 +379,15 @@ export default function RoomsSection() {
 
                   <div className="glass-card rounded-xl p-4 mb-5">
                     <p className="section-label text-[10px] mb-3">{T.tariffLabel}</p>
-                    <div className="grid grid-cols-3 gap-2 text-[10px] text-[#9CA3AF] mb-1 uppercase tracking-wider"><span /><span className="text-center">{T.single}</span><span className="text-center">{T.double}</span></div>
+                    <div className="grid grid-cols-3 gap-2 text-[10px] text-[#6B7280] mb-1 uppercase tracking-wider"><span /><span className="text-center">{T.single}</span><span className="text-center">{T.double}</span></div>
                     {[{ label: T.roomOnly, key: "roomOnly" as const }, { label: T.breakfast, key: "breakfast" as const }].map(({ label, key }) => (
                       <div key={key} className="grid grid-cols-3 gap-2 py-2 border-t border-[#F3F4F6] text-[12px]">
-                        <span className="text-[#6B7280]">{label}</span>
+                        <span className="text-[#374151]">{label}</span>
                         <span className="text-[#1A1A2A] font-semibold text-center">₹{room.pricing[key].single.toLocaleString()}</span>
                         <span className="text-[#1A1A2A] font-semibold text-center">₹{room.pricing[key].double.toLocaleString()}</span>
                       </div>
                     ))}
-                    <p className="text-[10px] text-[#9CA3AF] mt-2">{T.gstNote}</p>
+                    <p className="text-[10px] text-[#6B7280] mt-2">{T.gstNote}</p>
                   </div>
 
                   <button onClick={() => setActiveModal(room)}
@@ -404,11 +404,11 @@ export default function RoomsSection() {
           className="mt-10 glass-card rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
           <div className="flex-1">
             <p className="section-label text-[10px] mb-2">{T.cancelLabel}</p>
-            <p className="text-[13px] text-[#6B7280]">{T.cancelVal}</p>
+            <p className="text-[13px] text-[#374151]">{T.cancelVal}</p>
           </div>
           <div className="flex-1">
             <p className="section-label text-[10px] mb-2">{T.bookingLabel}</p>
-            <p className="text-[13px] text-[#6B7280]">{T.bookingVal}<a href="mailto:reservation@limetreehotels.com" className="grad-text">reservation@limetreehotels.com</a></p>
+            <p className="text-[13px] text-[#374151]">{T.bookingVal}<a href="mailto:reservation@limetreehotels.com" className="grad-text">reservation@limetreehotels.com</a></p>
           </div>
         </motion.div>
       </div>

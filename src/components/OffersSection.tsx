@@ -56,7 +56,7 @@ export default function OffersSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
@@ -100,11 +100,11 @@ export default function OffersSection() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #7357FF20, #FF8A4520)" }}>
                   <Clock size={20} strokeWidth={1.5} className="grad-text" />
                 </div>
-                <span className="text-[10px] uppercase tracking-[0.18em] font-semibold text-[#9CA3AF]">{T.card2Tag}</span>
+                <span className="text-[10px] uppercase tracking-[0.18em] font-semibold text-[#6B7280]">{T.card2Tag}</span>
               </div>
               <h3 className="text-[22px] font-bold text-[#1A1A2A] leading-tight mb-1" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>{T.card2Title}</h3>
               <p className="text-[13px] font-medium mb-3 grad-text">{T.card2Sub}</p>
-              <p className="text-[14px] text-[#6B7280] leading-[1.75] flex-1 mb-6">{T.card2Desc}</p>
+              <p className="text-[14px] text-[#374151] leading-[1.75] flex-1 mb-6">{T.card2Desc}</p>
               <a href="#rooms" className="flex items-center gap-2 text-[13px] font-semibold hover:gap-3 transition-all duration-200 grad-text">
                 {T.card2Cta} <ArrowRight size={14} />
               </a>
@@ -128,11 +128,11 @@ export default function OffersSection() {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #7357FF20, #FF8A4520)" }}>
                   <Tag size={20} strokeWidth={1.5} className="grad-text" />
                 </div>
-                <span className="text-[10px] uppercase tracking-[0.18em] font-semibold text-[#9CA3AF]">{T.card3Tag}</span>
+                <span className="text-[10px] uppercase tracking-[0.18em] font-semibold text-[#6B7280]">{T.card3Tag}</span>
               </div>
               <h3 className="text-[22px] font-bold text-[#1A1A2A] leading-tight mb-1" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>{T.card3Title}</h3>
               <p className="text-[13px] font-medium mb-3 grad-text">{T.card3Sub}</p>
-              <p className="text-[14px] text-[#6B7280] leading-[1.75] flex-1 mb-6">{T.card3Desc}</p>
+              <p className="text-[14px] text-[#374151] leading-[1.75] flex-1 mb-6">{T.card3Desc}</p>
               <a href="#rooms" className="flex items-center gap-2 text-[13px] font-semibold hover:gap-3 transition-all duration-200 grad-text">
                 {T.card3Cta} <ArrowRight size={14} />
               </a>

@@ -89,16 +89,16 @@ export default function AboutSection() {
             >
               {T.h2}
             </h2>
-            <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase mb-6">{T.tagline}</p>
-            <p className="text-[#6B7280] text-[15px] leading-[1.85] mb-6">{T.body1}</p>
-            <p className="text-[#6B7280] text-[15px] leading-[1.85] mb-10">{T.body2}</p>
+            <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase mb-6">{T.tagline}</p>
+            <p className="text-[#374151] text-[15px] leading-[1.85] mb-6">{T.body1}</p>
+            <p className="text-[#374151] text-[15px] leading-[1.85] mb-10">{T.body2}</p>
 
             <div className="grid grid-cols-4 gap-4">
               {T.stats.map((s, i) => (
                 <div key={s.label} className="glass-card rounded-2xl p-4 flex flex-col items-center text-center">
                   <div className="grad-text mb-2">{statIcons[i]}</div>
                   <p className="text-[18px] font-bold text-[#1A1A2A]">{s.value}</p>
-                  <p className="text-[11px] text-[#6B7280] uppercase tracking-wider">{s.label}</p>
+                  <p className="text-[11px] text-[#374151] uppercase tracking-wider">{s.label}</p>
                 </div>
               ))}
             </div>

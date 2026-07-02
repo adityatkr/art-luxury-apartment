@@ -70,7 +70,7 @@ export default function RestaurantsSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -91,7 +91,7 @@ export default function RestaurantsSection() {
                   <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <div>
                       <h3 className="text-white text-[22px] font-bold leading-tight" style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}>{r.name}</h3>
-                      <p className="text-white/50 text-[12px]">{r.tagline}</p>
+                      <p className="text-white/80 text-[12px]">{r.tagline}</p>
                     </div>
                   </div>
                   <div className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -99,13 +99,13 @@ export default function RestaurantsSection() {
                 </div>
 
                 <div className="p-6 flex-1">
-                  <p className="text-[14px] text-[#6B7280] leading-[1.75] mb-5">{r.desc}</p>
+                  <p className="text-[14px] text-[#374151] leading-[1.75] mb-5">{r.desc}</p>
                   <div className="grid grid-cols-2 gap-4 mb-5">
                     <div>
                       <p className="section-label text-[10px] mb-2">{T.cuisineLabel}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {r.cuisine.map((c) => (
-                          <span key={c} className="bg-[#F7F8FA] text-[#6B7280] text-[11px] px-2.5 py-1 rounded-full">{c}</span>
+                          <span key={c} className="bg-[#F7F8FA] text-[#374151] text-[11px] px-2.5 py-1 rounded-full">{c}</span>
                         ))}
                       </div>
                     </div>
@@ -113,12 +113,12 @@ export default function RestaurantsSection() {
                       <p className="section-label text-[10px] mb-2">{T.featuresLabel}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {r.features.map((f) => (
-                          <span key={f} className="bg-[#F7F8FA] text-[#6B7280] text-[11px] px-2.5 py-1 rounded-full">{f}</span>
+                          <span key={f} className="bg-[#F7F8FA] text-[#374151] text-[11px] px-2.5 py-1 rounded-full">{f}</span>
                         ))}
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-[13px] text-[#9CA3AF] pt-4 border-t border-[#F3F4F6]">
+                  <div className="flex items-center gap-2 text-[13px] text-[#6B7280] pt-4 border-t border-[#F3F4F6]">
                     <Clock size={14} className="grad-text" strokeWidth={1.5} />
                     <span className="font-medium text-[#374151]">{T.openLabel}:</span>
                     <span>{r.timings}</span>

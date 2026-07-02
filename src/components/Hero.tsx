@@ -128,7 +128,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.55 }}
-          className="text-white/50 text-[14px] leading-[1.8] mb-8 max-w-[460px] tracking-[0.03em]"
+          className="text-white/80 text-[14px] leading-[1.8] mb-8 max-w-[460px] tracking-[0.03em]"
         >
           {T.desc}
         </motion.p>
@@ -177,7 +177,7 @@ export default function Hero() {
       >
         <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row gap-3 items-end">
           <div className="flex-1 min-w-0">
-            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">{T.roomType}</label>
+            <label className="text-[10px] text-white/70 uppercase tracking-widest block mb-1.5">{T.roomType}</label>
             <select
               value={room}
               onChange={(e) => setRoom(e.target.value)}
@@ -188,7 +188,7 @@ export default function Hero() {
             </select>
           </div>
           <div className="flex-1 min-w-0">
-            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">{T.checkIn}</label>
+            <label className="text-[10px] text-white/70 uppercase tracking-widest block mb-1.5">{T.checkIn}</label>
             <input
               type="date"
               value={checkIn}
@@ -198,7 +198,7 @@ export default function Hero() {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <label className="text-[10px] text-white/40 uppercase tracking-widest block mb-1.5">{T.checkOut}</label>
+            <label className="text-[10px] text-white/70 uppercase tracking-widest block mb-1.5">{T.checkOut}</label>
             <input
               type="date"
               value={checkOut}
@@ -224,7 +224,7 @@ export default function Hero() {
         className="absolute bottom-28 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 1.8 }}>
-          <ChevronDown size={22} className="text-white/30" />
+          <ChevronDown size={22} className="text-white/60" />
         </motion.div>
       </motion.div>
     </section>

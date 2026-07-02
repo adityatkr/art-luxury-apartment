@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -54,10 +54,10 @@ export default function TestimonialsSection() {
                 ))}
               </div>
               <Quote size={20} className="text-[#E5E7EB] mb-3" />
-              <p className="text-[14px] text-[#6B7280] leading-[1.8] flex-1 mb-6 italic">{t.text}</p>
+              <p className="text-[14px] text-[#374151] leading-[1.8] flex-1 mb-6 italic">{t.text}</p>
               <div className="pt-5 border-t border-[#F3F4F6]">
                 <p className="text-[14px] font-semibold text-[#1A1A2A]">{t.name}</p>
-                <p className="text-[12px] text-[#9CA3AF]">{t.role}</p>
+                <p className="text-[12px] text-[#6B7280]">{t.role}</p>
                 <span className="mt-2 inline-block text-[10px] font-medium px-2.5 py-1 rounded-full"
                   style={{ background: "rgba(115,87,255,0.15)", color: "#9B7DFF" }}>{t.stay}</span>
               </div>

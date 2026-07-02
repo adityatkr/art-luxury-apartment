@@ -82,7 +82,7 @@ export default function ContactSection() {
             style={{ fontSize: "clamp(28px, 3.8vw, 48px)", fontFamily: "var(--font-noto-sans-jp), sans-serif", letterSpacing: "0.04em" }}>
             {T.h2}
           </motion.h2>
-          <p className="text-[#9CA3AF] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
+          <p className="text-[#6B7280] text-[13px] tracking-[0.1em] uppercase">{T.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10">
@@ -131,7 +131,7 @@ export default function ContactSection() {
                   <Send size={22} className="text-white" />
                 </div>
                 <p className="text-[16px] font-semibold text-[#1A1A2A] mb-2">{T.successTitle}</p>
-                <p className="text-[13px] text-[#6B7280]">{T.successBody}</p>
+                <p className="text-[13px] text-[#374151]">{T.successBody}</p>
                 <button onClick={() => { setStep("form"); setForm({ name: "", email: "", phone: "", subject: T.subjects[0], message: "" }); }}
                   className="mt-6 text-[12px] grad-text hover:opacity-80 transition-opacity">{T.sendAnother}</button>
               </div>
