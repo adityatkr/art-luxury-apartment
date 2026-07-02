@@ -69,14 +69,16 @@ export default function NearbySection() {
               ))}
             </div>
 
-            <div className="mt-8 p-5 rounded-2xl border border-white/[0.07]" style={{ background: "linear-gradient(135deg, rgba(115,87,255,0.12), rgba(255,138,69,0.08))" }}>
-              <div className="flex items-start gap-3">
-                <MapPin size={16} className="grad-text mt-0.5 flex-shrink-0" />
+            <div className="mt-8 p-5 rounded-2xl border border-[#E5E7EB]" style={{ background: "linear-gradient(135deg, rgba(115,87,255,0.06), rgba(255,138,69,0.04))" }}>
+              <div className="flex items-start gap-4">
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #7357FF, #FF8A45)" }}>
+                  <MapPin size={15} className="text-white" strokeWidth={2} />
+                </div>
                 <div>
-                  <p className="text-[13px] font-semibold text-white mb-1">Art: Luxury Serviced Apartment</p>
-                  <p className="text-[12px] text-white/80 leading-relaxed">517, Sector 27, Golf Course Road, Gurugram, Haryana</p>
-                  <a href="tel:+917428095672" className="text-[12px] grad-text mt-2 block hover:opacity-80">+91 74280 95672</a>
-                  <a href="mailto:reservation@limetreehotels.com" className="text-[12px] grad-text block hover:opacity-80">reservation@limetreehotels.com</a>
+                  <p className="text-[14px] font-bold text-[#1A1A2A] mb-1">Art: Luxury Serviced Apartment</p>
+                  <p className="text-[13px] text-[#374151] leading-relaxed mb-2">517, Sector 27, Golf Course Road, Gurugram, Haryana</p>
+                  <a href="tel:+917428095672" className="text-[13px] font-medium grad-text mt-1 block hover:opacity-80">+91 74280 95672</a>
+                  <a href="mailto:reservation@limetreehotels.com" className="text-[13px] font-medium grad-text block hover:opacity-80">reservation@limetreehotels.com</a>
                 </div>
               </div>
             </div>
